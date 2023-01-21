@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav/Nav';
+import './App.scss';
+import MexicanCuisine from './components/Mexican/MexicanCuisine'
+import KoreanCuisine from './components/Korean/KoreanCuisine'
+import ThaiCuisine from './components/Thai/ThaiCuisine'
+import ItalianCuisine from './components/Italian/ItalianCuisine'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App">
+      <Nav />
+      <main className='main-section'>
+        <Routes>
+          <Route path='/Mexican' element= {<MexicanCuisine/>}/>
+          <Route path='/Korean' element= {<KoreanCuisine/>}/>
+          <Route path= '/Thai' element= {<ThaiCuisine/>}/>
+          <Route path= '/Italian' element= {<ItalianCuisine/>}/>
+        </Routes>
+           
+
+           </main>
+
+      
     </div>
+    </Router>
+    
   );
 }
 
