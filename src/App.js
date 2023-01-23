@@ -13,6 +13,7 @@ function App() {
       <Nav />
       <main className='main-section'>
         <Routes>
+          <Route path= '/' element = {<MexicanCuisine/>}/>
           <Route path='/Mexican' element= {<MexicanCuisine/>}/>
           <Route path='/Korean' element= {<KoreanCuisine/>}/>
           <Route path= '/Thai' element= {<ThaiCuisine/>}/>
