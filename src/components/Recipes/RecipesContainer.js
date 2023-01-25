@@ -1,19 +1,20 @@
 import './recipes.scss'
 import RecipeCard from '../RecipeCard/RecipeCard'
 
-const RecipesContainer = () => {
+const RecipesContainer = ({recipes}) => {
+
+console.log(recipes)
+
+const recipesCollection = recipes.map((recipe)=>{
+
+    return <RecipeCard title= {recipe.title} image = {recipe.image} key= {recipe.id}/>
+
+})
+console.log(recipesCollection)
     return (
         <section className='recipes-container'>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
-            <RecipeCard/>
+            {recipesCollection}
+           
         </section>
 
     )

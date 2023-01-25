@@ -6,12 +6,15 @@ import { useState, useEffect } from 'react'
 
 
 const MexicanCuisine= () => {
-    
+
 const [recipes, setRecipes] =useState([])
 
 const getMexicanRecipes= async ()=> {
-    const apiResponse= await axios.get('https://api.spoonacular.com/recipes/complexSearch?cuisine=Mexican&number=5&apiKey=7273d60b17a64977950c0d5938d916a0')
-    console.log(apiResponse.data.results)
+
+    const apiResponse= await axios.get('https://api.spoonacular.com/recipes/complexSearch?cuisine=Mexican&number=20&apiKey=0ca9a24559c547fcb5e4bd188a0a2448')
+
+
+
     setRecipes(apiResponse.data.results)
 }
 
@@ -21,10 +24,9 @@ const getMexicanRecipes= async ()=> {
         }, [])
 
 
-
     return (
         <div className="mexican">
-        <RecipesContainer/>
+        <RecipesContainer recipes ={recipes}/>
         </div>
        
     )
