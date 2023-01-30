@@ -2,9 +2,11 @@ import './recipecard.scss'
 const RecipeCard = ({title, image}) => {
     return (
         <div className='card'>
-            <h1>{title}</h1>
-            <img src={image} alt='img'/>
-
+            
+            <img className='recipe_img' src={image} alt='img'/>
+            <div className='recipe_title'>
+             <h1>{title}</h1>
+            </div>
             
         </div>
     )

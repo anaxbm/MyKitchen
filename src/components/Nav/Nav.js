@@ -7,7 +7,7 @@ const Nav = () => {
          <nav className='nav'>
 
             <div className='logo'>
-                <h1>My Kitchen</h1>
+                <h1 className='main_title'>My Kitchen</h1>
             </div>
 
 
