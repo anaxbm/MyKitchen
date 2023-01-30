@@ -8,10 +8,10 @@ import { useState, useEffect } from 'react'
 const MexicanCuisine= () => {
 
 const [recipes, setRecipes] =useState([])
-
 const getMexicanRecipes= async ()=> {
+    console.log(`${process.env.REACT_APP_API_KEY}`)
 
-    const apiResponse= await axios.get('https://api.spoonacular.com/recipes/complexSearch?cuisine=Mexican&number=20&apiKey=0ca9a24559c547fcb5e4bd188a0a2448')
+    const apiResponse= await axios.get(`https://api.spoonacular.com/recipes/complexSearch?cuisine=Mexican&number=20&apiKey=${process.env.REACT_APP_API_KEY}`)
 
 
 
