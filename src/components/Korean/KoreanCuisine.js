@@ -9,7 +9,7 @@ const KoreanCuisine= () => {
 
  const getKoreanRecipes = async ()=>{
 
-    const apiResponse = await axios.get('https://api.spoonacular.com/recipes/complexSearch?cuisine=Korean&number=20&apiKey=7273d60b17a64977950c0d5938d916a0')
+    const apiResponse = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?cuisine=Korean&number=20&apiKey=${process.env.REACT_APP_API_KEY}`)
    
 
     setRecipes(apiResponse.data.results)

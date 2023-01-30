@@ -12,7 +12,7 @@ const ItalianCuisine = () => {
 
     const getItalianRecipes= async () => {
 
-        const apiResponse= await axios.get('https://api.spoonacular.com/recipes/complexSearch?cuisine=Italian&number=20&apiKey=7273d60b17a64977950c0d5938d916a0')
+        const apiResponse= await axios.get(`https://api.spoonacular.com/recipes/complexSearch?cuisine=Italian&number&apiKey=${process.env.REACT_APP_API_KEY}`)
          console.log(apiResponse.data.results)
 
          setRecipes(apiResponse.data.results)
